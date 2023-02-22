@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { ErrorBoundary } from './app/ErrorBoundary'
 import { ThemeProvider } from './theme'
 
-console.log(import.meta.env.VITE_API_URL)
+console.info(import.meta.env.VITE_API_URL)
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>

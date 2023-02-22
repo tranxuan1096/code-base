@@ -1,7 +1,8 @@
+import { Route, Routes } from 'react-router-dom'
+
 import NotFound from '@/components/common/NotFound/NotFound'
 import DraftContainer from '@/features/draft/DraftContainer'
 import { AUTH_ROUTES } from '@/routes/path'
-import { Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
