@@ -36,6 +36,21 @@ Note:
 
 Read more: [Vite - Env Variables and Modes](https://vitejs.dev/guide/env-and-mode.html)
 
+### Env mode
+Development: `.env.development`
+Staging: `.env.staging`
+Production: `.env.production`
+
+### Load other env mode in dev
+Default when we use `yarn dev` vite use .env.development
+If you want to test another env you can add more flag
+Staging: `--mode staging`
+Production: `--mode production`
+
+```
+yarn dev --mode staging
+```
+
 ## Mockdata
 Setup mockup data when doing UI for project
 
