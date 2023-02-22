@@ -5,7 +5,9 @@ import {
   StyledEngineProvider,
   ThemeProvider as MUIThemeProvider,
 } from '@mui/material/styles'
+
 import globalStyles from './globalStyles'
+import theme from './theme'
 
 interface ThemeProviderProps {
   children: ReactNode
@@ -14,7 +16,7 @@ interface ThemeProviderProps {
 export default function ThemeProvider({ children }: ThemeProviderProps) {
   return (
     <StyledEngineProvider injectFirst>
-      <MUIThemeProvider theme={{}}>
+      <MUIThemeProvider theme={theme}>
         <CssBaseline />
         <GlobalStyles styles={globalStyles} />
         {children}

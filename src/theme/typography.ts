@@ -1,28 +1,111 @@
-import { TypographyVariantsOptions } from '@mui/material/styles'
+import type { ThemeOptions } from '@mui/material/styles'
 
-export const options: TypographyVariantsOptions = {
-  fontFamily: [
-    `Exo`,
-    `-apple-system`,
-    `"BlinkMacSystemFont"`,
-    `"Segoe UI"`,
-    `"Roboto"`,
-    `"Oxygen"`,
-    `"Ubuntu"`,
-    `"Cantarell"`,
-    `"Fira Sans"`,
-    `"Droid Sans"`,
-    `"Helvetica Neue"`,
-    `sans-serif`,
-  ].join(','),
+import breakpoints from './breakpoints'
+import { ResponsiveFontSize } from './types'
+
+const REM_BASE = 16
+
+const FONT_PRIMARY = '"Roboto", "Helvetica", "Arial", sans-serif' // Google Font
+
+const typography: ThemeOptions['typography'] = {
+  fontFamily: FONT_PRIMARY,
+  fontWeightRegular: 400,
+  fontWeightMedium: 600,
+  fontWeightBold: 700,
+  h1: {
+    fontWeight: 700,
+    lineHeight: 1.25,
+    fontSize: pxToRem(40),
+    ...responsiveFontSizes({ sm: 52, md: 58, lg: 64 }),
+  },
+  h2: {
+    fontWeight: 700,
+    lineHeight: 1.33,
+    fontSize: pxToRem(32),
+    ...responsiveFontSizes({ sm: 40, md: 44, lg: 48 }),
+  },
+  h3: {
+    fontWeight: 700,
+    lineHeight: 1.5,
+    fontSize: pxToRem(24),
+    ...responsiveFontSizes({ sm: 26, md: 30, lg: 32 }),
+  },
+  h4: {
+    fontWeight: 700,
+    lineHeight: 1.5,
+    fontSize: pxToRem(20),
+    ...responsiveFontSizes({ sm: 20, md: 24, lg: 24 }),
+  },
+  h5: {
+    fontWeight: 700,
+    lineHeight: 1.5,
+    fontSize: pxToRem(18),
+    ...responsiveFontSizes({ sm: 19, md: 20, lg: 20 }),
+  },
+  h6: {
+    fontWeight: 700,
+    lineHeight: 1.5,
+    fontSize: pxToRem(17),
+    ...responsiveFontSizes({ sm: 18, md: 18, lg: 18 }),
+  },
+  subtitle1: {
+    fontWeight: 600,
+    lineHeight: 1.5,
+    fontSize: pxToRem(16),
+  },
+  subtitle2: {
+    fontWeight: 600,
+    lineHeight: 1.5,
+    fontSize: pxToRem(14),
+  },
+  body1: {
+    lineHeight: 1.5,
+    fontSize: pxToRem(16),
+  },
+  body2: {
+    lineHeight: 1.5,
+    fontSize: pxToRem(14),
+  },
+  caption: {
+    lineHeight: 1.5,
+    fontSize: pxToRem(12),
+  },
+  overline: {
+    fontWeight: 700,
+    lineHeight: 1.5,
+    fontSize: pxToRem(12),
+    textTransform: 'uppercase',
+  },
+  button: {
+    fontWeight: 700,
+    lineHeight: 1.7,
+    fontSize: pxToRem(14),
+    textTransform: 'capitalize',
+  },
 }
 
-export const overrides: TypographyVariantsOptions = {
-  h1: { fontSize: '2em' },
-  h2: { fontSize: '1.5em' },
-  h3: { fontSize: '1.3em' },
-  h4: { fontSize: '1em' },
-  h5: { fontSize: '0.8em' },
-  h6: { fontSize: '0.7em' },
-  button: { textTransform: 'none' },
+// Helper
+
+export function remToPx(value: number) {
+  return Math.round(parseFloat(value.toString()) * REM_BASE)
 }
+
+export function pxToRem(value: number) {
+  return `${value / REM_BASE}rem`
+}
+
+export function responsiveFontSizes({ sm, md, lg }: ResponsiveFontSize) {
+  return {
+    [breakpoints.up('sm')]: {
+      fontSize: pxToRem(sm),
+    },
+    [breakpoints.up('md')]: {
+      fontSize: pxToRem(md),
+    },
+    [breakpoints.up('lg')]: {
+      fontSize: pxToRem(lg),
+    },
+  }
+}
+
+export default typography
