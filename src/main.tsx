@@ -1,9 +1,10 @@
-import App from '@/app/App'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
-import { ErrorBoundary } from './app/ErrorBoundary'
-import { ThemeProvider } from './theme'
+
+import App from '@app/App'
+import { ErrorBoundary } from '@app/ErrorBoundary'
+import { ThemeProvider } from '@theme/index'
 
 console.info(import.meta.env.VITE_API_URL)
 
