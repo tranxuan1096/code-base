@@ -18,9 +18,17 @@
     "types": ["node"],
     "baseUrl": "./src",
     "paths": {
-      "@/*": ["./*"]
+      "@api/*": ["./api/*"],
+      "@app/*": ["./app/*"],
+      "@assets/*": ["./assets/*"],
+      "@components/*": ["./components/*"],
+      "@constants/*": ["./constants/*"],
+      "@features/*": ["./features/*"],
+      "@hooks/*": ["./hooks/*"],
+      "@theme/*": ["./theme/*"],
+      "@types/*": ["./types/*"],
+      "@utils/*": ["./utils/*"]
     }
   },
-  "include": ["src"],
   "references": [{ "path": "./tsconfig.vite.json" }]
 }
