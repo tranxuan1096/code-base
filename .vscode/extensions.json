@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "arcanis.vscode-zipfs",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "mikestead.dotenv",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}
