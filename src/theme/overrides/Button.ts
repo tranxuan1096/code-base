@@ -1,8 +1,19 @@
-import { Theme } from '@mui/material/styles'
+import { alpha, Theme } from '@mui/material/styles'
 
 export default function Button(theme: Theme) {
   return {
     MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: '8px',
+        },
+        containedSecondary: {
+          boxShadow: `0 8px 16px 0 ${alpha(
+            theme.palette.secondary.main,
+            0.18,
+          )}`,
+        },
+      },
       defaultProps: {
         variant: 'contained',
         color: 'secondary',

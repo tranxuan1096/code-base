@@ -1,4 +1,4 @@
-import { Container, Stack } from '@mui/material'
+import { Stack } from '@mui/material'
 import { Outlet } from 'react-router-dom'
 
 const AuthLayout = () => {
@@ -9,11 +9,7 @@ const AuthLayout = () => {
       alignItems="center"
       bgcolor="background.default"
     >
-      <Container>
-        <Stack alignItems="center">
-          <Outlet />
-        </Stack>
-      </Container>
+      <Outlet />
     </Stack>
   )
 }

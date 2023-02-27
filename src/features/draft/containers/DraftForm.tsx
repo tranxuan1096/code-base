@@ -1,6 +1,6 @@
-import DropdownField from '@/components/form-control/DropdownField'
-import InputField from '@/components/form-control/InputField'
-import InputFieldGroup from '@/components/form-control/InputFieldGroup'
+import DropdownField from '@components/form-control/DropdownField'
+import InputField from '@components/form-control/InputField'
+import InputFieldGroup from '@components/form-control/InputFieldGroup'
 import {
   Button,
   Checkbox,

@@ -3,6 +3,7 @@ import { GlobalStylesProps } from '@mui/system'
 const globalStyles: GlobalStylesProps['styles'] = {
   '*': {
     boxSizing: 'border-box',
+    WebkitAppearance: 'none',
   },
   html: {
     margin: 0,

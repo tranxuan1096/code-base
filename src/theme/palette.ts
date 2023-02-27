@@ -117,7 +117,7 @@ const palette: ThemeOptions['palette'] = {
   },
   background: {
     paper: '#fff',
-    default: GREY[100],
+    default: '#FDFEFF',
   },
   action: {
     active: GREY[600],
