@@ -94,10 +94,11 @@ const typography: ThemeOptions['typography'] = {
     fontSize: pxToRem(12),
   },
   button: {
-    fontWeight: 700,
-    lineHeight: 1.7,
+    fontWeight: 400,
+    lineHeight: 21 / 14,
+    letterSpacing: 0.2,
     fontSize: pxToRem(14),
-    textTransform: 'capitalize',
+    textTransform: 'inherit',
   },
 }
 

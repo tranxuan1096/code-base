@@ -27,7 +27,7 @@ export default function Input(theme: Theme) {
           height: '42px',
           backgroundColor: 'white',
           boxSizing: 'border-box',
-          ['&:not(.Mui-error):not(.Mui-disabled):hover .MuiOutlinedInput-notchedOutline']:
+          '&:not(.Mui-error):not(.Mui-disabled):hover .MuiOutlinedInput-notchedOutline':
             {
               borderColor: theme.palette.secondary.main,
             },
