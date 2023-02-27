@@ -1,13 +1,13 @@
-import { alpha, Theme } from '@mui/material/styles'
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
 import FavoriteIcon from '@mui/icons-material/Favorite'
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
+import { Theme } from '@mui/material/styles'
+import React from 'react'
 
 export default function Checkbox(theme: Theme): Theme['components'] {
   return {
     MuiCheckbox: {
       defaultProps: {
-        icon: <FavoriteBorderIcon />,
-        checkedIcon: <FavoriteIcon />,
+        color: 'secondary',
       },
     },
   }

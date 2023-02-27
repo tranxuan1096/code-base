@@ -1,64 +1,55 @@
-import { alpha, Theme } from '@mui/material/styles'
+import { Theme } from '@mui/material/styles'
+import { VinovaPalette } from '../palette'
 
 export default function Input(theme: Theme) {
   return {
     MuiInputBase: {
-      styleOverrides: {
-        root: {
-          '&.Mui-disabled': {
-            '& svg': { color: theme.palette.text.disabled },
-          },
-        },
-        input: {
-          '&::placeholder': {
-            opacity: 1,
-            color: theme.palette.text.disabled,
-          },
-        },
+      styleOverrides: {},
+      defaultProps: {
+        color: 'secondary',
       },
     },
     MuiInput: {
-      styleOverrides: {
-        underline: {
-          '&:before': {
-            borderBottomColor: alpha(theme.palette.grey[500], 0.56),
-          },
-        },
+      styleOverrides: {},
+      defaultProps: {
+        color: 'secondary',
       },
     },
     MuiFilledInput: {
-      styleOverrides: {
-        root: {
-          backgroundColor: alpha(theme.palette.grey[500], 0.12),
-          '&:hover': {
-            backgroundColor: alpha(theme.palette.grey[500], 0.16),
-          },
-          '&.Mui-focused': {
-            backgroundColor: theme.palette.action.focus,
-          },
-          '&.Mui-disabled': {
-            backgroundColor: theme.palette.action.disabledBackground,
-          },
-        },
-        underline: {
-          '&:before': {
-            borderBottomColor: alpha(theme.palette.grey[500], 0.56),
-          },
-        },
+      styleOverrides: {},
+      defaultProps: {
+        color: 'secondary',
       },
     },
     MuiOutlinedInput: {
       styleOverrides: {
         root: {
-          '& .MuiOutlinedInput-notchedOutline': {
-            borderColor: alpha(theme.palette.grey[500], 0.32),
-          },
-          '&.Mui-disabled': {
-            '& .MuiOutlinedInput-notchedOutline': {
-              borderColor: theme.palette.action.disabledBackground,
+          height: '42px',
+          backgroundColor: 'white',
+          boxSizing: 'border-box',
+          ['&:not(.Mui-error):not(.Mui-disabled):hover .MuiOutlinedInput-notchedOutline']:
+            {
+              borderColor: theme.palette.secondary.main,
             },
+        },
+        notchedOutline: {
+          borderColor: VinovaPalette.NEUTRAL['d2'],
+        },
+        input: {
+          padding: '12px 16px',
+          '&::placeholder': {
+            color: VinovaPalette.NEUTRAL['9'],
           },
         },
+      },
+      defaultProps: {
+        color: 'secondary',
+      },
+    },
+    MuiTextField: {
+      styleOverrides: {},
+      defaultProps: {
+        InputLabelProps: { shrink: true },
       },
     },
   }

@@ -17,7 +17,7 @@ function App() {
         </RequireIsLoggedIn>
       }
     /> */}
-      <Route path="/draft" element={<DraftContainer />} />
+      <Route path="/draft/*" element={<DraftContainer />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   )
