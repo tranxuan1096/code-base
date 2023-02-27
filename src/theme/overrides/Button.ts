@@ -1,33 +1,31 @@
-import { alpha, Theme } from '@mui/material/styles'
+import { Theme } from '@mui/material/styles'
 
 export default function Button(theme: Theme) {
   return {
     MuiButton: {
+      defaultProps: {
+        variant: 'contained',
+        color: 'secondary',
+        disableElevation: true,
+      },
+    },
+    MuiIconButton: {
       styleOverrides: {
         root: {
-          '&:hover': {
-            boxShadow: 'none',
-          },
+          borderRadius: '5px',
+          border: '1px solid currentColor',
+        },
+        sizeSmall: {
+          width: '30px',
+          height: '30px',
+        },
+        sizeMedium: {
+          width: '40px',
+          height: '40px',
         },
         sizeLarge: {
-          height: 48,
-        },
-        containedInherit: {
-          color: theme.palette.grey[800],
-          '&:hover': {
-            backgroundColor: theme.palette.grey[400],
-          },
-        },
-        outlinedInherit: {
-          border: `1px solid ${alpha(theme.palette.grey[500], 0.32)}`,
-          '&:hover': {
-            backgroundColor: theme.palette.action.hover,
-          },
-        },
-        textInherit: {
-          '&:hover': {
-            backgroundColor: theme.palette.action.hover,
-          },
+          width: '50px',
+          height: '50px',
         },
       },
     },
