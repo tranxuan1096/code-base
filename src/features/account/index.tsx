@@ -1,6 +1,6 @@
 import { RouteObject, useRoutes } from 'react-router-dom'
-import { DetailAccount } from './DetailAccount'
-import { ListAccount } from './ListAccount'
+import { DetailAccount } from './pages/DetailAccount'
+import { ListAccount } from './pages/ListAccount'
 
 const configRoutes: RouteObject[] = [
   {
