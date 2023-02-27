@@ -5,76 +5,93 @@ import { ResponsiveFontSize } from './types'
 
 const REM_BASE = 16
 
-const FONT_PRIMARY = '"Roboto", "Helvetica", "Arial", sans-serif' // Google Font
+const FONT_PRIMARY = '"Poppins", sans-serif' // Google Font
 
 const typography: ThemeOptions['typography'] = {
   fontFamily: FONT_PRIMARY,
-  fontWeightRegular: 400,
-  fontWeightMedium: 600,
+  fontWeightRegular: 300,
+  fontWeightMedium: 400,
   fontWeightBold: 700,
   h1: {
-    fontWeight: 700,
-    lineHeight: 1.25,
-    fontSize: pxToRem(40),
-    ...responsiveFontSizes({ sm: 52, md: 58, lg: 64 }),
+    fontWeight: 400,
+    lineHeight: 1.3,
+    fontSize: pxToRem(24),
+    // ...responsiveFontSizes({ sm: 52, md: 58, lg: 64 }),
   },
   h2: {
-    fontWeight: 700,
-    lineHeight: 1.33,
-    fontSize: pxToRem(32),
-    ...responsiveFontSizes({ sm: 40, md: 44, lg: 48 }),
+    fontWeight: 500,
+    lineHeight: 1.3,
+    fontSize: pxToRem(24),
+    // ...responsiveFontSizes({ sm: 40, md: 44, lg: 48 }),
   },
   h3: {
-    fontWeight: 700,
-    lineHeight: 1.5,
-    fontSize: pxToRem(24),
-    ...responsiveFontSizes({ sm: 26, md: 30, lg: 32 }),
+    fontWeight: 500,
+    lineHeight: 1.2,
+    fontSize: pxToRem(20),
+    // ...responsiveFontSizes({ sm: 26, md: 30, lg: 32 }),
   },
   h4: {
-    fontWeight: 700,
-    lineHeight: 1.5,
+    fontWeight: 400,
+    lineHeight: 1.2,
     fontSize: pxToRem(20),
-    ...responsiveFontSizes({ sm: 20, md: 24, lg: 24 }),
+
+    // ...responsiveFontSizes({ sm: 20, md: 24, lg: 24 }),
   },
   h5: {
-    fontWeight: 700,
-    lineHeight: 1.5,
+    fontWeight: 300,
+    lineHeight: 1.2,
+    fontSize: pxToRem(20),
+    // ...responsiveFontSizes({ sm: 19, md: 20, lg: 20 }),
+  },
+  title: {
+    fontWeight: 600,
     fontSize: pxToRem(18),
-    ...responsiveFontSizes({ sm: 19, md: 20, lg: 20 }),
+    lineHeight: 1.3,
   },
-  h6: {
-    fontWeight: 700,
-    lineHeight: 1.5,
-    fontSize: pxToRem(17),
-    ...responsiveFontSizes({ sm: 18, md: 18, lg: 18 }),
+  title2: {
+    fontWeight: 400,
+    fontSize: pxToRem(18),
+    lineHeight: 1.3,
   },
-  subtitle1: {
-    fontWeight: 600,
-    lineHeight: 1.5,
+  title3: {
+    fontWeight: 400,
     fontSize: pxToRem(16),
+    lineHeight: 1.3,
   },
-  subtitle2: {
+  title4: {
     fontWeight: 600,
-    lineHeight: 1.5,
     fontSize: pxToRem(14),
+    lineHeight: 1.3,
+  },
+  title5: {
+    fontWeight: 400,
+    fontSize: pxToRem(14),
+    lineHeight: 1.3,
   },
   body1: {
-    lineHeight: 1.5,
-    fontSize: pxToRem(16),
-  },
-  body2: {
-    lineHeight: 1.5,
+    fontWeight: 300,
+    lineHeight: 1.25,
     fontSize: pxToRem(14),
   },
+  body2: {
+    fontWeight: 300,
+    lineHeight: 1.25,
+    fontSize: pxToRem(13),
+  },
+  body3: {
+    fontWeight: 400,
+    lineHeight: 1.25,
+    fontSize: pxToRem(13),
+  },
   caption: {
-    lineHeight: 1.5,
+    fontWeight: 400,
+    lineHeight: 1.25,
     fontSize: pxToRem(12),
   },
-  overline: {
-    fontWeight: 700,
-    lineHeight: 1.5,
+  caption2: {
+    fontWeight: 300,
+    lineHeight: 1.25,
     fontSize: pxToRem(12),
-    textTransform: 'uppercase',
   },
   button: {
     fontWeight: 700,
