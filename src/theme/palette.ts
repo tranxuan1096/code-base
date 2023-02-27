@@ -1,5 +1,5 @@
 import { ThemeOptions } from '@mui/material'
-import { alpha, Palette } from '@mui/material/styles'
+import { alpha } from '@mui/material/styles'
 
 const GREY = {
   0: '#FFFFFF',
@@ -14,73 +14,105 @@ const GREY = {
   900: '#161C24',
 }
 
-const PRIMARY: Palette['primary'] = {
-  lighter: '#D1E9FC',
-  light: '#76B0F1',
-  main: '#2065D1',
-  dark: '#103996',
-  darker: '#061B64',
-  contrastText: '#fff',
+const NEUTRAL = {
+  0: '#FFFFFF',
+  ea: '#EAEAEA',
+  de: '#EBEBEB',
+  d2: '#D2D2D2',
+  d7: '#D7D7D7',
+  f5: '#F5F5F5',
+  9: '#999999',
+  6: '#666666',
+  3: '#333333',
+  black: '#000000',
 }
 
-const SECONDARY: Palette['secondary'] = {
-  lighter: '#D6E4FF',
-  light: '#84A9FF',
-  main: '#3366FF',
-  dark: '#1939B7',
-  darker: '#091A7A',
-  contrastText: '#fff',
+const RED = {
+  100: '#FF131D',
+  80: '#FF424A',
+  60: '#FF7177',
+  40: '#FFA1A5',
+  20: '#FFD0D2',
+  5: '#FFD0D2',
 }
 
-const INFO: Palette['info'] = {
-  lighter: '#D0F2FF',
-  light: '#74CAFF',
-  main: '#1890FF',
-  dark: '#0C53B7',
-  darker: '#04297A',
-  contrastText: '#fff',
+const BLUE = {
+  100: '#5E90F0',
+  60: '#9EBCF6',
+  10: '#EDF3FE',
+  5: '#F7F9FE',
 }
 
-const SUCCESS: Palette['success'] = {
-  lighter: '#E9FCD4',
-  light: '#AAF27F',
-  main: '#54D62C',
-  dark: '#229A16',
-  darker: '#08660D',
-  contrastText: GREY[800],
+const INDICATOR = {
+  blue: '#8AC6E9',
+  green: '#95D8BC',
+  blueLight: '#EDF8FF',
+  naviLight: '#CFD9FF',
 }
 
-const WARNING: Palette['warning'] = {
-  lighter: '#FFF7CD',
-  light: '#FFE16A',
-  main: '#FFC107',
-  dark: '#B78103',
-  darker: '#7A4F01',
-  contrastText: GREY[800],
+const ALERT = {
+  10: '#FAD3D3',
+  100: '#EC7474',
+}
+const ETC = {
+  greenDot: '#63D12F',
+  redDot: '#FE7C7C',
+  yellowDot: '#FFCC69',
+  greenMoney: '#63D12F',
+  blueActive: '#007BFF',
+  yellowStar: '#FFB904',
 }
 
-const ERROR: Palette['error'] = {
-  lighter: '#FFE7D9',
-  light: '#FFA48D',
-  main: '#FF4842',
-  dark: '#B72136',
-  darker: '#7A0C2E',
-  contrastText: '#fff',
+const TAG = {
+  green100: '#1D9B40',
+  green10: '#E5FAE8',
+  violet100: '#705ACA',
+  violet10: '#F3F0FF',
+  blue100: '#2FA1BA',
+  blue10: '#EAF6F9',
+  orange100: '#E07F29',
+  orange10: '#FFEEDF',
+  yellow100: '#CEA71D',
+  yellow10: '#FFF8DF',
+}
+
+export const VinovaPalette = {
+  GREY,
+  TAG,
+  ALERT,
+  INDICATOR,
+  BLUE,
+  RED,
+  NEUTRAL,
+  ETC,
 }
 
 const palette: ThemeOptions['palette'] = {
   common: { black: '#000', white: '#fff' },
-  primary: PRIMARY,
-  secondary: SECONDARY,
-  info: INFO,
-  success: SUCCESS,
-  warning: WARNING,
-  error: ERROR,
+  primary: {
+    main: RED[100],
+  },
+  secondary: {
+    main: BLUE[100],
+  },
+  error: {
+    main: RED[100],
+  },
+  success: {
+    main: TAG['green100'],
+  },
+  warning: {
+    main: TAG['orange100'],
+    contrastText: GREY[0],
+  },
+  info: {
+    main: TAG['blue100'],
+  },
   grey: GREY,
-  divider: alpha(GREY[500], 0.24),
+  divider: alpha(NEUTRAL['d7'], 0.24),
   text: {
-    primary: GREY[800],
-    secondary: GREY[600],
+    primary: NEUTRAL['3'],
+    secondary: NEUTRAL['9'],
     disabled: GREY[500],
   },
   background: {

@@ -6,8 +6,7 @@ export default function Checkbox(theme: Theme): Theme['components'] {
   return {
     MuiCheckbox: {
       defaultProps: {
-        icon: <FavoriteBorderIcon />,
-        checkedIcon: <FavoriteIcon />,
+        color: 'secondary',
       },
     },
   }
